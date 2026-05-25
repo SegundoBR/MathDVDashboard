@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-shell text-ink font-sans antialiased;
+  background-image:
+    radial-gradient(circle at top left, rgba(14, 147, 132, 0.14), transparent 30%),
+    radial-gradient(circle at top right, rgba(16, 24, 40, 0.05), transparent 28%);
+  background-attachment: fixed;
+}
+
+::selection {
+  background: rgba(14, 147, 132, 0.18);
+  color: #101828;
+}
+
+.card {
+  @apply rounded-3xl border border-slate-200 bg-white p-5 shadow-sm transition-shadow;
+}
+
+.card:hover {
+  box-shadow: 0 20px 45px rgba(16, 24, 40, 0.08);
+}
+
+.page-shell {
+  @apply mx-auto max-w-7xl px-4 sm:px-6;
+}
+
+.page-heading {
+  @apply flex flex-col gap-3 rounded-3xl border border-slate-200 bg-white/90 p-5 shadow-sm sm:flex-row sm:items-end sm:justify-between;
+}
+
+.page-eyebrow {
+  @apply text-xs font-semibold uppercase tracking-[0.22em] text-accent;
+}
+
+.page-title {
+  @apply text-2xl font-extrabold text-ink sm:text-3xl;
+}
+
+.page-subtitle {
+  @apply mt-1 max-w-2xl text-sm leading-6 text-slate-600;
+}
+
+.table-shell {
+  @apply overflow-x-auto rounded-3xl border border-slate-200 bg-white shadow-sm;
+}
+
+.table-head {
+  @apply bg-slate-50/90 text-left text-[11px] font-semibold uppercase tracking-[0.18em] text-slate-500;
+}
+
+.pill {
+  @apply inline-flex items-center rounded-full px-2.5 py-1 text-xs font-semibold;
+}
